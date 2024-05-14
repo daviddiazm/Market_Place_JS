@@ -1,7 +1,8 @@
 <script setup>
+import { defineComponent, onMounted, ref } from 'vue';
 import ImgHover from '@/components/ImgHover.vue';
 import Users from '../assets/jsons/User.json'
-import { defineComponent, onMounted, ref } from 'vue';
+import StudentCard from '@/components/StudentCard.vue';
 
 const users = ref([]);
 onMounted(() => {
@@ -22,14 +23,22 @@ onMounted(() => {
         <p>Tenemos una variedad de perfiles dentro de los que estan estudiantes, egresados, profesionales, que se enfocan en una gran variedad de tecnologias dispuestos a colaborar con usted</p>
       </article>
       <section class="stuList">
-        <section class="StuCard" v-for="(user, index) in users" :key="index">
-          <div class="user-info">
-            <img :src="user.img" alt="">
-            <h3>{{ user.name }} {{ user.lastName }}</h3>
-            <p>{{ user.email }}</p>
-            <p>{{ user.age }}</p>
-          </div>
-          <button>Whatsap</button>
+        <StudentCard v-for="(user, index) in Users" 
+          :key="index" 
+          :name="user.name"  
+          :lastName="user.lastName"  
+          :img="user.img"
+          :email="user.email"
+          :age="user.age"
+          />
+      </section>
+      <section class="projectList">
+        <section class="ProjectCard">
+          <img src="" alt="">
+          <h3>Nombre del proyecto</h3>
+          <p>Descripcion</p>
+          <a href="#">Link del proyecto</a>
+          <a href="#">Nombre del autor</a>
         </section>
       </section>
     </section>
@@ -65,28 +74,5 @@ onMounted(() => {
   display: flex;
   flex-wrap: wrap;
   gap: 2vw;
-}
-
-.StuCard {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.user-info {
-  /* Estilos para la información del usuario */
-}
-
-.user-info h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.user-info p {
-  font-size: 1rem;
-  color: #666;
 }
 </style>
