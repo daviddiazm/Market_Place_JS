@@ -58,7 +58,6 @@ onMounted(() => {
           :description="project.description"
           :projectLink="project.projectLink"
           :projectOwner="project.projectOwner"
-          :ownerName="project.ownerName"
           />
       </section>
     </section>

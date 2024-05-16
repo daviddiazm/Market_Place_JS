@@ -6,8 +6,7 @@ const props = defineProps({
   img: String,
   description: String,
   projectLink: String,
-  projectOwner: String,
-  ownerName: String,
+  projectOwner: String
 })
 </script>
 
@@ -17,7 +16,6 @@ const props = defineProps({
     <h3>{{ name }}</h3>
     <p>{{ description }}</p>
     <a :href="projectLink">Link del proyecto</a>
-    <a :href="projectOwner"> {{ ownerName }} </a>
   </div>
 </template>
 
