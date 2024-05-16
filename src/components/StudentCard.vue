@@ -1,4 +1,4 @@
-<script lang='js'>
+<!-- <script lang='js'>
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -29,11 +29,32 @@ export default defineComponent({
     return { props }
   }
 })
+</script> -->
+
+<script setup>
+import { ref } from 'vue';
+import { defineProps } from 'vue'; // Import defineProps to access props
+
+// Define the props
+const props = defineProps({
+  name: String,
+  lastName: String,
+  email: String,
+  img: String,
+  age: Number
+});
+
+// Use ref with default value
+const name = ref(props.name || "No tiene nombre");
+const lastName = ref(props.lastName || "No tiene apellido");
+const email = ref(props.email || "No tiene email");
+const img = ref(props.img || "No tiene img");
+const age = ref(props.age || "No tiene edad");
 </script>
+
 
 <template >
   <div class="StuCard">
-
     <div class="user-info">
       <img :src="img" alt="">
       <h3>{{ name }} {{ lastName }}</h3>
