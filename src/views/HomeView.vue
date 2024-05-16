@@ -1,13 +1,24 @@
 <script setup>
 import { defineComponent, onMounted, ref } from 'vue';
 import ImgHover from '@/components/ImgHover.vue';
-import Users from '../assets/jsons/User.json'
+import User from '../assets/jsons/User.json'
+import Project from '../assets/jsons/Project.json'
 import StudentCard from '@/components/StudentCard.vue';
+import ProjectCard from '@/components/ProjectCard.vue';
+
 
 const users = ref([]);
 onMounted(() => {
-  users.value = Users;
+  users.value = User;
 });
+
+const projects = ref([]);
+onMounted(() => {
+  users.value = Project;
+});
+
+
+
 </script>
 
 <template>
@@ -23,7 +34,7 @@ onMounted(() => {
         <p>Tenemos una variedad de perfiles dentro de los que estan estudiantes, egresados, profesionales, que se enfocan en una gran variedad de tecnologias dispuestos a colaborar con usted</p>
       </article>
       <section class="stuList">
-        <StudentCard v-for="(user, index) in Users" 
+        <StudentCard v-for="(user, index) in User" 
           :key="index" 
           :name="user.name"  
           :lastName="user.lastName"  
@@ -32,19 +43,24 @@ onMounted(() => {
           :age="user.age"
           />
       </section>
-      <section class="projectList">
-        <section class="ProjectCard">
-          <img src="" alt="">
-          <h3>Nombre del proyecto</h3>
-          <p>Descripcion</p>
-          <a href="#">Link del proyecto</a>
-          <a href="#">Nombre del autor</a>
-        </section>
-      </section>
     </section>
 
     <section class="proyect-list__container">
-
+      <section class="proyect-list__banner">
+        <h2>Aqui encontraras proyectos</h2>
+        <p>Esta es la lista de proyectos en los cuales tu como desarrollador podras participar</p>
+      </section>
+      <section class="projectList">
+        <ProjectCard v-for="project in Project" 
+          :key="project.projectImg"
+          :img="project.projectImg" 
+          :name="project.projectName"
+          :description="project.description"
+          :projectLink="project.projectLink"
+          :projectOwner="project.projectOwner"
+          :ownerName="project.ownerName"
+          />
+      </section>
     </section>
   </main>
 </template>
@@ -75,4 +91,31 @@ onMounted(() => {
   flex-wrap: wrap;
   gap: 2vw;
 }
+
+/* project */
+
+
+.proyect-list__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+}
+
+.proyect-list__banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.projectList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+
 </style>
