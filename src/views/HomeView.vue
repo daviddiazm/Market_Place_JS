@@ -5,7 +5,7 @@ import User from '../assets/jsons/User.json'
 import Project from '../assets/jsons/Project.json'
 import StudentCard from '@/components/StudentCard.vue';
 import ProjectCard from '@/components/ProjectCard.vue';
-
+import HomeBackground from '@/components/HomeBackground.vue';
 
 const users = ref([]);
 onMounted(() => {
@@ -24,8 +24,9 @@ onMounted(() => {
 <template>
   <main>
     <section class="home__stu-rep">
-      <ImgHover />
-      <ImgHover />
+      <!-- <ImgHover />
+      <ImgHover /> -->
+      <HomeBackground />
     </section>
 
     <section class="stu-list__container">
@@ -114,7 +115,7 @@ onMounted(() => {
   display: flex;
   flex-wrap: wrap;
   gap: 2vw;
-}
+} 
 
 
 </style>
