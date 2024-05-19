@@ -19,6 +19,15 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  /* variables del market place */
+  --color-green-Apple: var(#5EBD3D);
+  --color-yellow-orange-Apple: var(#FFB901);
+  --color-orange-Apple: var(#F78200);
+  --color-red-Apple: var(#E23839);
+  --color-purple-Apple: var(#973999);
+  --color-ligth-blue-Apple: var(#009CDF);
+
 }
 
 /* semantic color variables for this project */
@@ -32,6 +41,7 @@
 
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
+
 
   --section-gap: 160px;
 }
