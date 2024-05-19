@@ -22,12 +22,15 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
 header {
-  position: sticky;
+  width: 100vw;
+  position: fixed;
+  z-index: 5;
   padding: 20px;
   display: flex;
   gap: 2vw;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  backdrop-filter: blur(5px);
 }
 
 nav {
