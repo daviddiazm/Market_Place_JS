@@ -95,3 +95,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+/* fuentes */
+@font-face {
+  font-family: 'Audiowide-Regular';
+  src: url('./fonts/Audiowide/Audiowide-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
