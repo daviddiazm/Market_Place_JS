@@ -60,7 +60,7 @@ const age = ref(props.age || "No tiene edad");
       <h3>{{ name }} {{ lastName }}</h3>
       <p>{{ email }}</p>
       <p>{{ age }}</p>
-      <button>Whatsap</button>
+      <button>Mas detalles</button>
     </div>
   </div>
 </template>
