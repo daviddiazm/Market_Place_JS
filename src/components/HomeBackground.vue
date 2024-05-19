@@ -80,7 +80,7 @@ onMounted(() => {
 <style scoped>
 .home {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -115,6 +115,11 @@ onMounted(() => {
   border-radius: 15px;
   background-color: rgba(240, 248, 255, 0.484);
 }
+
+.logo > h1 {
+  font-family: 'Audiowide-Regular';
+} 
+
 
 .text__container {
   padding: 2vw;
