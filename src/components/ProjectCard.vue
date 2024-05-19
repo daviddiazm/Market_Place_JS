@@ -21,7 +21,8 @@ const props = defineProps({
 
 <style scoped>
 .ProjectCard {
-  /* Estilo para el contenedor de la tarjeta */
+  min-width: 350px;
+  width: 25vw;
   display: flex; /* Permite que los elementos internos se ordenen en fila */
   flex-direction: column; /* Ordena los elementos uno encima del otro */
   align-items: center; /* Centra los elementos horizontalmente */

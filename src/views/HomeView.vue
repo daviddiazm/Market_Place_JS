@@ -88,6 +88,8 @@ onMounted(() => {
 
 .stuList {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 2vw;
 }
@@ -112,9 +114,12 @@ onMounted(() => {
 }
 
 .projectList {
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   gap: 2vw;
+  align-items: center;
+  justify-content: center;
 } 
 
 
